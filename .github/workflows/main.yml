@@ -1,0 +1,27 @@
+name: CD
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - uses: actions/checkout@v2
+    - name: npm install
+      run: npm install
+    - name: Build
+      run: npm run build
+      
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.0.100'
+    - uses: lauchacarro/Azure-Storage-Action@master
+      with:
+        enabled-static-website: 'true'
+        folder: 'build/static'
+        connection-string: ${{ secrets.AZ_STORAGE }}

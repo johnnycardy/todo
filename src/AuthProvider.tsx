@@ -38,7 +38,7 @@ export default function withAuthProvider<T extends React.Component<AuthComponent
       this.publicClientApplication = new PublicClientApplication({
         auth: {
           clientId: config.appId,
-          redirectUri: config.redirectUri
+          redirectUri: window.location.origin
         },
         cache: {
           cacheLocation: "sessionStorage",

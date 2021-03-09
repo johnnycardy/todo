@@ -1,11 +1,9 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 import React from 'react';
-import { NavLink as RouterNavLink } from 'react-router-dom';
 import { Table } from 'reactstrap';
-import moment, { Moment } from 'moment-timezone';
-import { findOneIana } from "windows-iana";
-import { Event, TodoTask } from 'microsoft-graph';
+import moment from 'moment-timezone';
+import { TodoTask } from 'microsoft-graph';
 import { config } from './Config';
 import withAuthProvider, { AuthComponentProps } from './AuthProvider';
 import CalendarDayRow from './CalendarDayRow';

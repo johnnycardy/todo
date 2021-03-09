@@ -33,8 +33,6 @@ function formatDateTime(dateTime: string | undefined, format: string) {
 
 export default class CalendarDayRow extends React.Component<CalendarDayRowProps> {
   render() {
-    var today = moment();
-    var rowClass = today.day() === this.props.date?.day() ? 'table-warning' : '';
     var timeFormat = this.props.timeFormat;
 
     var dateCell = (

@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 // <graphServiceSnippet1>
-import moment, { Moment } from 'moment';
 import { Event, TodoTaskList, TodoTask } from 'microsoft-graph';
 import { GraphRequestOptions, PageCollection, PageIterator } from '@microsoft/microsoft-graph-client';
 
@@ -79,8 +78,6 @@ export async function getItemsFromList(client:any, listId:string): Promise<TodoT
 }
 
 export async function getLists(client:any): Promise<TodoTaskList[]> {
-
-  var endDateTime = moment().subtract(1, 'day').format();
 
   // GET /me/calendarview?startDateTime=''&endDateTime=''
   // &$select=subject,organizer,start,end

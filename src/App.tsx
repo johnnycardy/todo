@@ -10,7 +10,6 @@ import Welcome from './Welcome';
 import Calendar from './Calendar';
 import NewEvent from './NewEvent';
 import 'bootstrap/dist/css/bootstrap.css';
-import Todo from './Todo';
 
 class App extends Component<AuthComponentProps> {
   render() {

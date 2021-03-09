@@ -3,7 +3,6 @@
 
 // <NavBarSnippet>
 import React from 'react';
-import { NavLink as RouterNavLink } from 'react-router-dom';
 import {
   Button,
   Collapse,
@@ -93,15 +92,6 @@ export default class NavBar extends React.Component<NavBarProps, NavBarState> {
   }
 
   render() {
-    // Only show calendar nav item if logged in
-    let calendarLink = null;
-    if (this.props.isAuthenticated) {
-      calendarLink = (
-        <NavItem>
-          <RouterNavLink to="/calendar" className="nav-link" exact>Calendar</RouterNavLink>
-        </NavItem>
-      );
-    }
 
     return (
       <div>

@@ -4,7 +4,6 @@ import React from 'react';
 import { PublicClientApplication } from '@azure/msal-browser';
 
 import { config } from './Config';
-import { getUserDetails } from './GraphService';
 
 export interface AuthComponentProps {
   error: any;

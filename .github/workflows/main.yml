@@ -17,11 +17,16 @@ jobs:
     - name: Build
       run: npm run build
       
-    - uses: actions/setup-dotnet@v1
+    - name: Azure Blob Storage Upload
+      uses: bacongobbler/azure-blob-storage-upload@v1.1.0
       with:
-        dotnet-version: '3.0.100'
-    - uses: lauchacarro/Azure-Storage-Action@master
-      with:
-        enabled-static-website: 'true'
-        folder: 'build/static'
-        connection-string: ${{ secrets.AZ_STORAGE }}
+        # The connection string for the storage account
+        connection_string: ${{ secrets.AZ_STORAGE }}
+        # The name of the storage account container these assets will be uploaded to
+        container_name: $web
+        # The name of the directory you want to upload
+        source_dir: 'build'
+        # Extra arguments that can be passed to `az storage blob upload-batch|sync`. Useful for passing flags like `--pattern` or `--destination-path`
+        sync: true
+        # Use `az storage blob sync` to synchronize blobs recursively
+        #sync: # optional

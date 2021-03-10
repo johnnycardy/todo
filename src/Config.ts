@@ -1,6 +1,6 @@
 export const config = {
-  appId: '4c09bdfc-cc15-4aef-a678-2ab4558eb3d6',
+  appId: 'c9530c3b-356e-4612-a5c9-bc3f48afbf3f',
   scopes: [
-    'tasks.read'
+    'tasks.readwrite.shared'
   ]
 };

@@ -111,7 +111,7 @@ export default class NavBar extends React.Component<NavBarProps, NavBarState> {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://github.com" target="_blank">
+                  <NavLink href="https://github.com/johnnycardy/todo" target="_blank">
                     <i className="fas fa-external-link-alt mr-1"></i>
                     GitHub
                   </NavLink>

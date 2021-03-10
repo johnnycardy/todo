@@ -106,7 +106,6 @@ export default class NavBar extends React.Component<NavBarProps, NavBarState> {
               <Nav className="justify-content-end" navbar>
               <NavItem>
                   <NavLink href="https://twitter.com/johnnycardy" target="_blank">
-                    <i className="fas fa-external-link-alt mr-1"></i>
                     Created by @johnnycardy
                   </NavLink>
                 </NavItem>
